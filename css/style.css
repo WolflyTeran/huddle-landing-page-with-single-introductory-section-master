@@ -1,0 +1,70 @@
+p{
+    font-size: 18px;
+}
+body{
+    background-color:rgb(70, 0, 128) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    background-image: url("../images/bg-desktop.svg");
+}
+
+.grade{
+    grid-gap: 5%;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    grid: "img text"
+    "img btn";
+}
+.img{
+    margin-left: 20px;
+    grid-area: img;
+}
+.text{
+    margin-right: 20px;
+    grid-area: text;
+}
+
+div.btn{
+    grid-area: btn;
+    height: fit-content;
+    width: fit-content;
+    justify-content: center;
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    transition: ease-in-out 0.2s;
+}
+div.btn:hover{
+    background-color: blue;
+}
+
+footer{
+    display: flex;
+    height: fit-content;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+}
+div.social{
+    font-size: x-large;
+    right: 0;
+}
+
+@media(max-width: 768px){
+    body{
+        background-size: cover;
+        background-image: url("../images/bg-mobile.svg");
+        background-repeat: no-repeat;
+    } 
+    .grade{
+        grid-template-rows: auto;
+        grid: "img" "text" "btn";
+    }
+    .img{
+        max-width: 500px;
+        height: auto;
+    }
+}
