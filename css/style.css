@@ -16,7 +16,8 @@ body{
     justify-content: space-between;
     align-items: center;
     grid: "img text"
-    "img btn";
+    "img btn"
+    "social social";
 }
 .img{
     margin-left: 20px;
@@ -28,6 +29,7 @@ body{
 }
 
 div.btn{
+    margin-bottom: 55px;
     grid-area: btn;
     height: fit-content;
     width: fit-content;
@@ -38,19 +40,33 @@ div.btn{
     transition: ease-in-out 0.2s;
 }
 div.btn:hover{
-    background-color: blue;
+    background-color: pink;
 }
 
-footer{
-    display: flex;
-    height: fit-content;
-    bottom: 0;
-    right: 0;
-    position: fixed;
+.social #face:hover{
+    grid-area: face;
+    color: pink;
 }
+
+.social #insta:hover{
+    grid-area: insta;
+    color: pink;
+}
+
+.social #twt:hover{
+    grid-area: twt;
+    color: pink;
+}
+
 div.social{
-    font-size: x-large;
+    flex-direction: row-reverse;
+    gap: 20px
+    ;
+    display: flex;
+    grid-area: social;
     right: 0;
+    margin: 25px;
+    font-size: x-large;
 }
 
 @media(max-width: 768px){
@@ -61,7 +77,7 @@ div.social{
     } 
     .grade{
         grid-template-rows: auto;
-        grid: "img" "text" "btn";
+        grid: "img" "text" "btn" "social" ;
     }
     .img{
         max-width: 500px;
